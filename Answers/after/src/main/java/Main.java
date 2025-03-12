@@ -20,25 +20,27 @@ public class Main {
         u1.placeShip(p2MainGrid, p2.Ships, p2.lastIndex,c1);
 
         u1.showGrids(p1MainGrid,p2MainGrid);
+        while(!u1.isGameOver(p1MainGrid,p2MainGrid)) {
 
-        boolean player1Turn = true;
-        String p1g = "";
-        String p2g = "";
+            boolean player1Turn = true;
+            String p1g = "";
+            String p2g = "";
 
-        while (!u1.isGameOver(p1MainGrid, p2MainGrid)) {
-            if (player1Turn) {
-                System.out.println("Player 1's turn:");
-                p1AttackGrid.showGrid();
-                p1.playerTurn(p2MainGrid, p1AttackGrid, p1g, 1,c1,u1);
-            } else {
-                System.out.println("Player 2's turn:");
-                p2AttackGrid.showGrid();
-                p2.playerTurn(p1MainGrid, p2AttackGrid, p2g, 2,c1,u1);
+            while (!u1.isGameOver(p1MainGrid, p2MainGrid)) {
+                if (player1Turn) {
+                    System.out.println("Player 1's turn:");
+                    p1AttackGrid.showGrid();
+                    p1.playerTurn(p2MainGrid, p1AttackGrid, p1g, 1, c1, u1);
+                } else {
+                    System.out.println("Player 2's turn:");
+                    p2AttackGrid.showGrid();
+                    p2.playerTurn(p1MainGrid, p2AttackGrid, p2g, 2, c1, u1);
+                }
+                player1Turn = !player1Turn;
             }
-            player1Turn = !player1Turn;
-        }
 
-        System.out.println("Game Over!");
+            System.out.println("Game Over!");
+        }
 
     }
 

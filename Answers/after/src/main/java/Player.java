@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Player {
-    public Ship[] Ships = new Ship[4];
+    public Ship[] Ships = new Ship[6];
     public int lastIndex = 0;
     private Grid mainGrid = new Grid();
     private Grid AttackGrid = new Grid();
