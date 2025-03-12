@@ -6,7 +6,7 @@ public class Player {
     private Grid[][] mainGrid = new Grid[11][11];
     private Grid[][] AttackGrid = new Grid[11][11];
 
-    static void playerTurn(Grid pMainGrid, Grid pAttackGrid, String give, int player, coordinate c1 , Utils u1) {
+    public void playerTurn(Grid pMainGrid, Grid pAttackGrid, String give, int player, coordinate c1 , Utils u1) {
         System.out.println("Enter a cell to fire at (e.g., A6):");
         boolean played = false;
         Scanner scanner = new Scanner(System.in);

@@ -1,7 +1,7 @@
 public class Grid{
    public char[][] grid = new char[11][11];
    public Grid(){
-        for(int i=1 ; i<=10 ; ){
+        for(int i=1 ; i<=10 ; i++){
            for(int j=1 ; j<=10 ; j++){
              grid[i][j] = '~';
          }

@@ -1,7 +1,7 @@
 public class Ship {
     private int size;
     private boolean isHorizontal;
-    private String[] places;
+    public String[] places;
 
     public void setSize(int size) {
         this.size = size;

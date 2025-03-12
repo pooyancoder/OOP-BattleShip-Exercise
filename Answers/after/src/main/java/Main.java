@@ -1,17 +1,13 @@
-
-import java.util.Scanner;
-
 public class Main {
 
-    Scanner sc = new Scanner(System.in);
-
-
-    static Grid p1MainGrid = new Grid();
-    static Grid p2MainGrid = new Grid();
-    static Grid p1AttackGrid = new Grid();
-    static Grid p2AttackGrid = new Grid();
-
     public static void main(String[] args) {
+
+         Grid p1MainGrid = new Grid();
+         Grid p2MainGrid = new Grid();
+         Grid p1AttackGrid = new Grid();
+         Grid p2AttackGrid = new Grid();
+
+        System.out.println("**********");
         Utils u1  = new Utils();
         coordinate c1 = new coordinate();
         Player p1 = new Player();
