@@ -7,11 +7,13 @@ public class Main {
          Grid p1AttackGrid = new Grid();
          Grid p2AttackGrid = new Grid();
 
-        System.out.println("**********");
         Utils u1  = new Utils();
         coordinate c1 = new coordinate();
         Player p1 = new Player();
         Player p2 = new Player();
+
+        p1.initializeGrids(p1MainGrid.grid,p1AttackGrid.grid);
+        p2.initializeGrids(p2MainGrid.grid,p2AttackGrid.grid);
 
 
         u1.placeShip(p1MainGrid, p1.Ships, p1.lastIndex,c1);

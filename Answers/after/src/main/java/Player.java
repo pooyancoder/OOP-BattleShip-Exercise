@@ -3,8 +3,17 @@ import java.util.Scanner;
 public class Player {
     public Ship[] Ships = new Ship[4];
     public int lastIndex = 0;
-    private Grid[][] mainGrid = new Grid[11][11];
-    private Grid[][] AttackGrid = new Grid[11][11];
+    private Grid mainGrid = new Grid();
+    private Grid AttackGrid = new Grid();
+
+    public void initializeGrids(char[][] grid1, char [][] grid2){
+        for (int i = 1; i <= 10 ; i++) {
+            for (int j =1; j <= 10; j++) {
+                mainGrid.grid[i][j] = grid1[i][j];
+                mainGrid.grid[i][j] = grid2[i][j];
+            }
+        }
+    }
 
     public void playerTurn(Grid pMainGrid, Grid pAttackGrid, String give, int player, coordinate c1 , Utils u1) {
         System.out.println("Enter a cell to fire at (e.g., A6):");
